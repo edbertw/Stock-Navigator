@@ -1,0 +1,284 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the body takes the full height */
+  color: #eaeaea;
+  background-color: #121212; /* Fallback color */
+}
+
+.app-container {
+  background-image: url('/Users/edbertwidjaja/my-app/src/ai-generated-8490532_640.webp'); /* Relative path to the background image */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  background-attachment: fixed; /* Keep the background fixed on scroll */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-logo {
+  width: 300px; 
+  margin-bottom: 20px; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  text-align: center;
+  background-color: rgba(43, 43, 43, 0.85); /* More transparency for the background */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  max-width: 400px;
+  width: 90%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 30px;
+    max-width: 90%;
+  }
+}
+
+/* Styles for the next page */
+.next-page {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Spread out content, with the back button at the bottom */
+  align-items: center;
+  min-height: 100vh; /* Full height of the viewport */
+  padding: 20px;
+  text-align: center;
+}
+.next-next-page {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Spread out content, with the back button at the bottom */
+  align-items: center;
+  min-height: 100vh; /* Full height of the viewport */
+  padding: 20px;
+  text-align: center; 
+}
+/* Center and display logo */
+.next-page-logo {
+  max-width: 150px; /* Adjust the size of the logo */
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container for the content */
+.content-wrapper {
+  flex-grow: 1; /* Take up available space between the top content and the back button */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+}
+
+/* Back Button - no longer absolute, positioned naturally at the bottom */
+.next-button,
+.back-button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px; /* Add space above the button */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.next-page .content-wrapper {
+  padding-bottom: 50px;
+}
+.next-button,
+.back-button:hover {
+  background-color: #555;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #00bcd4; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+.info-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(43, 43, 43, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.info-section h2 {
+  color: #4CAF50; /* Green */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.info-section p {
+  color: #eaeaea;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive 2-column layout */
+  gap: 20px; /* Space between items */
+  margin-top: 20px;
+}
+
+.info-item {
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly darker background for each item */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-item h2 {
+  color: #4CAF50; /* Use the same green as in the main title */
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.info-item p {
+  color: #eaeaea;
+  font-size: 0.95rem;
+}
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 50px; /* Space between grid items */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the grid */
+  padding: 20px;
+  grid-auto-rows: minmax(400px, auto); /* Set a minimum height for each row */
+}
+
+/* Individual Graph Card */
+.graph-card {
+  background-color: rgba(43, 43, 43, 0.85);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 400px; /* Ensure sufficient height for each graph */
+  width: 100%; /* Ensure each graph card takes full width within its grid cell */
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the graph vertically */
+  align-items: center; /* Center the graph horizontally */
+}
+
+.graph-card:hover {
+  transform: scale(1.03);
+}
+
+/* Graph Title */
+.graph-card h3 {
+  font-size: 1.2rem;
+  color: #228B22; /* Green color */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+}
+
+/* Animation for the spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* General App Container */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+/* Error Text */
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error-text {
+  font-size: 2rem;
+  color: red;
+}
+
+/* Loading Spinner Animation */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Spinner Animation */
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-top: 8px solid #3498db; /* Darker top */
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+  margin-bottom: 15px;
+}
+
+/* Loading Text Animation */
+.loading-text {
+  font-size: 1.5rem;
+  color: #ffffff;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Keyframes for Spinner Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Keyframes for Pulsing Text */
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
