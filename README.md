@@ -1,7 +1,7 @@
 # Stock-Navigator
 
 ## What is it?
-One stop full-stack application for stock market enthusiasts to find out more information about their favourite stocks. Information range from non-technical to highly statistical metrics used to measure stock performance and future opportunities for prospective investors.
+One stop full-stack application for stock market enthusiasts to find out more information about their favourite stocks. Information range from non-technical to highly statistical metrics and interactive charts used to measure stock performance and future opportunities for prospective investors. Another feature includes curated stock price prediction using autoTS with results displayed in a chart.
 
 ## How to run?
 1. Activate virtual environment available under mybackend directory
