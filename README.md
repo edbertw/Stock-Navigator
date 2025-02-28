@@ -1,5 +1,9 @@
 # Stock-Navigator
 
+## New Feature (Ongoing production)
+RAG-based chatbot to handle stock statistics questions through web-scraped Knowledge Base
+To do: Integrate the built RAG system to backend and frontend systems
+
 ## What is it?
 One stop full-stack application for stock market enthusiasts to find out more information about their favourite stocks. Information range from non-technical to highly statistical metrics and interactive charts used to measure stock performance and future opportunities for prospective investors. Another feature includes curated stock price prediction using autoTS with results displayed in a chart.
 
